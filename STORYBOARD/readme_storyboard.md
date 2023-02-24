@@ -1,5 +1,8 @@
 CÃU TRÚC KICH BÄN
-STATIC/cautruckichban3hoi.jpg
+
+
+![cautruckichban3hoi](https://user-images.githubusercontent.com/109997053/221169726-dc05270c-162b-44e7-ae77-f41ccc37b96f.jpg)
+
 
 Hồi 1 từ Cảnh mở đầu phim, Giới thiệu nhân vật đến Biến cố khởi đầu.
 Hồi 2 bắt đầu từ Bước ngoặt 1, Mid-point hay còn gọi là Điểm không thể quay đầu, đến Bước ngoặt 2.
