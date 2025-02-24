@@ -48,7 +48,7 @@ Houdini không phải là một nền tảng AI thuần túy, nhưng nó có th�
   - Gợi ý mô hình 3D phù hợp với project hiện tại.  
   - Tự động gán metadata cho tài nguyên.  
 
----
+
 
 ## **2. Cách Tích Hợp ONNX vào Houdini**  
 Houdini không hỗ trợ ONNX trực tiếp, nhưng bạn có thể tích hợp thông qua Python (với `onnxruntime`) hoặc kết hợp Houdini Engine với các công cụ AI bên ngoài.  
@@ -61,3 +61,46 @@ Houdini không hỗ trợ ONNX trực tiếp, nhưng bạn có thể tích hợp
   input_name = session.get_inputs()[0].name
   output_name = session.get_outputs()[0].name
   result = session.run([output_name], {input_name: input_data})
+
+
+  # **Hướng Dẫn Sử Dụng ONNX trong Houdini**  
+
+## **1. Giới Thiệu**  
+ONNX (Open Neural Network Exchange) là một định dạng mở giúp chạy mô hình AI trong nhiều nền tảng khác nhau, bao gồm Houdini. Trong hướng dẫn này, chúng ta sẽ sử dụng `onnxruntime` để chạy mô hình ONNX trong Houdini và áp dụng AI vào quy trình procedural modeling.  
+
+---
+
+## **2. Cài Đặt ONNX Runtime trong Houdini**  
+Houdini hỗ trợ Python, vì vậy chúng ta có thể cài đặt thư viện ONNX Runtime bằng lệnh sau:  
+
+
+pip install onnxruntime numpy
+
+
+import hou
+import numpy as np
+import onnxruntime as ort
+from PIL import Image
+
+# Đọc ảnh heightmap từ thư mục
+image_path = "C:/path/to/heightmap.png"  # Thay bằng đường dẫn thực tế
+image = Image.open(image_path).convert("L")  # Chuyển ảnh sang grayscale
+input_data = np.array(image, dtype=np.float32) / 255.0  # Chuẩn hóa dữ liệu
+
+# Tải mô hình ONNX
+session = ort.InferenceSession("C:/path/to/terrain_model.onnx")  # Thay đường dẫn mô hình
+
+# Chạy inference
+input_name = session.get_inputs()[0].name
+output_name = session.get_outputs()[0].name
+output_data = session.run([output_name], {input_name: input_data[np.newaxis, np.newaxis, :, :]})
+
+# Chuyển kết quả thành point cloud
+geo = hou.pwd().geometry()
+rows, cols = input_data.shape
+
+for i in range(rows):
+    for j in range(cols):
+        height = output_data[0][0][i][j] * 10  # Scale chiều cao
+        geo.createPoint().setPosition(hou.Vector3(j, height, i))
+
