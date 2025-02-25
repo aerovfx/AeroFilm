@@ -1,17 +1,28 @@
-🔥 Ví Dụ 1: Train Model với PyTorch trong Houdini
-** Bước 1: Cài đặt PyTorch trong Houdini **  
-Trước khi chạy, hãy đảm bảo Houdini có thể sử dụng PyTorch. Nếu bạn chưa cài đặt, mở Python Shell trong Houdini và chạy:
+```markdown
+# 🔥 Ví Dụ 1: Train Model với PyTorch trong Houdini  
+
+## **Bước 1: Cài đặt PyTorch trong Houdini**  
+Trước khi chạy, hãy đảm bảo Houdini có thể sử dụng PyTorch. Nếu bạn chưa cài đặt, mở **Python Shell** trong Houdini và chạy:  
+
+```python
 import pip
 pip.main(["install", "torch", "torchvision"])
-** Bước 2: Tạo Python Script Node trong TORCH ** 
-Trong Houdini, tạo một TOP Network (Tab → TOP Network).
+```
 
-Thêm node Python Script, mở Edit Parameter Interface và tạo tham số:
+---
 
-epochs (int, mặc định = 10)
-batch_size (int, mặc định = 16)
-learning_rate (float, mặc định = 0.001)
-Trong node Python Script, dán đoạn code sau:
+## **Bước 2: Tạo Python Script Node trong TOP**  
+Trong Houdini, tạo một **TOP Network** (`Tab → TOP Network`).  
+
+Thêm node **Python Script**, mở **Edit Parameter Interface** và tạo các tham số:  
+
+- **epochs** (int, mặc định = 10)  
+- **batch_size** (int, mặc định = 16)  
+- **learning_rate** (float, mặc định = 0.001)  
+
+Trong node **Python Script**, dán đoạn code sau:  
+
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -61,6 +72,11 @@ for epoch in range(epochs):
 # Lưu model
 torch.save(model.state_dict(), hou.pwd().parm("outputfile").eval())
 print("Model training complete and saved.")
- ** Bước 3: Chạy Training ** 
-Thêm tham số outputfile vào node để lưu model (output_model.pt).
-Nhấn Cook Output Node để chạy training.
+```
+
+---
+
+## **Bước 3: Chạy Training**  
+- Thêm tham số **outputfile** vào node để lưu model (`output_model.pt`).  
+- Nhấn **Cook Output Node** để chạy training.  
+```
