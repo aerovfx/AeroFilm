@@ -1,17 +1,25 @@
-🔷 Ví Dụ 2: Train Model với TensorFlow trong Houdini
-** Bước 1: Cài đặt TensorFlow **
-Nếu chưa cài đặt TensorFlow, mở Python Shell trong Houdini và chạy:
+# 🔷 Ví Dụ 2: Train Model với TensorFlow trong Houdini  
+
+## **Bước 1: Cài đặt TensorFlow**  
+Nếu chưa cài đặt TensorFlow, mở **Python Shell** trong Houdini và chạy:  
+
+```python
 import pip
 pip.main(["install", "tensorflow"])
+```
 
-** Bước 2: Tạo Python Script Node trong TOP **
-Tương tự như trên, tạo một Python Script node và thêm các tham số:
+---
 
-epochs (int, mặc định = 10)
-batch_size (int, mặc định = 16)
-learning_rate (float, mặc định = 0.001)
-Trong Python Script, dán đoạn code sau:
+## **Bước 2: Tạo Python Script Node trong TOP**  
+Tương tự như trên, tạo một **Python Script** node và thêm các tham số:  
 
+- **epochs** (int, mặc định = 10)  
+- **batch_size** (int, mặc định = 16)  
+- **learning_rate** (float, mặc định = 0.001)  
+
+Trong **Python Script**, dán đoạn code sau:  
+
+```python
 import tensorflow as tf
 import numpy as np
 import hou
@@ -40,7 +48,10 @@ model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size, verbose=1)
 # Lưu model
 model.save(hou.pwd().parm("outputfile").eval())
 print("Model training complete and saved.")
+```
 
-** Bước 3: Chạy Training **
-Thêm tham số outputfile để lưu model (output_model.h5).
-Nhấn Cook Output Node để chạy training.
+---
+
+## **Bước 3: Chạy Training**  
+- Thêm tham số **outputfile** để lưu model (`output_model.h5`).  
+- Nhấn **Cook Output Node** để chạy training.  
