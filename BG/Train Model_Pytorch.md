@@ -1,4 +1,3 @@
-```markdown
 # 🔥 Ví Dụ 1: Train Model với PyTorch trong Houdini  
 
 ## **Bước 1: Cài đặt PyTorch trong Houdini**  
