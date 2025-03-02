@@ -15,8 +15,8 @@ Giai đoạn xem xét concept thiết lập nền tảng cho các bước tiếp
 Omid chia sẻ kinh nghiệm chuyên nghiệp về cách cân bằng giữa sáng tạo nghệ thuật và ràng buộc kỹ thuật, bao gồm tối ưu topology cho mô hình hoạt hình (animation-ready) và đảm bảo các chi tiết độ phân giải cao (như lỗ chân lông, nếp nhăn vải) phù hợp với mục tiêu chân thực của concept.
 
 5. Vai trò trong Toàn bộ Workshop
-Chương này là một phần của quy trình 12 chương trong Vol. 1, từ xem xét concept đến hoàn thiện chất liệu và phụ kiện. Những bài học này rất quan trọng cho nghệ sĩ muốn thăng tiến từ cấp độ trung cấp lên cao cấp, vì chúng củng cố tầm quan trọng của việc lập kế hoạch và khả năng thích ứng trong sản xuất game AAA.
+Chương này là một phần của quy trình 12 chương 1, từ xem xét concept đến hoàn thiện chất liệu và phụ kiện. Những bài học này rất quan trọng cho nghệ sĩ muốn thăng tiến từ cấp độ trung cấp lên cao cấp, vì chúng củng cố tầm quan trọng của việc lập kế hoạch và khả năng thích ứng trong sản xuất game AAA.
 
-Để hiểu sâu hơn, tập 2 (Vol. 2) của workshop bao gồm retopology, texturing và rendering, dựa trên nền tảng từ giai đoạn đầu này.
+workshop bao gồm retopology, texturing và rendering, dựa trên nền tảng từ giai đoạn đầu này.
 
 Thông điệp chính: Việc xem xét concept 2D không chỉ là sao chép — đó là giai đoạn mang tính chiến lược để kết hợp tầm nhìn nghệ thuật với thực thi kỹ thuật, đảm bảo hiệu quả và chất lượng trong phát triển nhân vật game.

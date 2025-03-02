@@ -1,0 +1,3 @@
+https://colab.research.google.com/github/Swakshan/AI-Manga-Colorizer/blob/main/Manga_Colorizer.ipynb
+
+Mã notebook này chạy trên [Google Colab](https://colab.research.google.com/github/Swakshan/AI-Manga-Colorizer/blob/main/Manga_Colorizer.ipynb) và sử dụng các mô hình AI tiên tiến để tự động hóa quy trình tô màu cho tranh Manga. Nó cho phép bạn tải lên ảnh gốc, điều chỉnh các tham số để đạt được phong cách màu sắc mong muốn, và xem kết quả trực tiếp trên nền tảng đám mây. Đây là công cụ lý tưởng cho các nghệ sĩ hay nhà phát triển đang tìm kiếm giải pháp nhanh chóng và hiệu quả trong việc tạo ra các bức tranh có màu sắc sáng tạo.
