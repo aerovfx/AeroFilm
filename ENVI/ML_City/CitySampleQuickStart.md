@@ -1062,7 +1062,23 @@ Bây giờ, bạn có thể **chuyển sang phần thứ hai của hướng dẫ
 ![image](https://github.com/user-attachments/assets/9f72f36c-6c4e-4957-94d9-736ad3990517)
 
 
+### **Khám Phá Thêm & Tùy Chỉnh Thành Phố Của Bạn! 🏙️**  
 
+Bạn đã hoàn thành quá trình tạo thành phố bằng Houdini Engine, nhưng còn rất nhiều điều để **khám phá và tối ưu hóa**! 🚀  
+
+#### **Những điều bạn có thể thử nghiệm thêm:**  
+✅ **Bước 3:** Tạo nhiều hình dạng thành phố khác nhau bằng cách thay đổi đường spline.   
+✅ **Bước 4:** Thêm nhiều tuyến đường chính để tạo ra các khu vực đô thị độc đáo.  
+✅ **Bước 5:** Điều chỉnh các thông số trong **City Layout**, như kích thước và mạng lưới đường phố.  
+✅ **Bước 6:** Vẽ thêm nhiều loại **zone** (khu vực) để đa dạng hóa chiều cao và kiểu dáng tòa nhà.  
+✅ **Bước 7:** Tạo nhiều tuyến cao tốc, thử nghiệm vòng cao tốc khép kín và điều chỉnh số làn xe.  
+✅ **Bước 10:** Tùy chỉnh **City Lot Processor**, thử nghiệm các thông số về lô đất và chiều cao tòa nhà.  
+
+🛠 **Mẹo:**  
+- **Tắt chế độ Auto Update** trước khi thực hiện nhiều thay đổi để tránh Houdini cập nhật liên tục.  
+- Kiểm tra kết quả trực tiếp trong Houdini trước khi xuất dữ liệu sang Unreal Engine.  
+
+🔥 **Bây giờ là lúc để sáng tạo và biến thành phố của bạn thành một kiệt tác!** 🚧🏗️
 
 
 
