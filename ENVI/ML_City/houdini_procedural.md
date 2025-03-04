@@ -1,0 +1,5 @@
+Quá trình tạo thành phố theo phương pháp thủ tục (procedural) trong Unreal Engine sử dụng Houdini được hướng dẫn chi tiết trong tài liệu của Epic Games. Phương pháp này cho phép tạo ra các thành phố và hệ thống đường cao tốc một cách tự động và linh hoạt, giúp tiết kiệm thời gian và công sức so với việc xây dựng thủ công.
+
+Quá trình bắt đầu bằng việc sử dụng các công cụ của Houdini để thiết kế các yếu tố cơ bản của thành phố, như đường phố, tòa nhà và cơ sở hạ tầng. Các yếu tố này sau đó được nhập vào Unreal Engine thông qua plugin Houdini Engine, cho phép tích hợp liền mạch giữa hai phần mềm. Trong Unreal Engine, người dùng có thể tùy chỉnh thêm các chi tiết và tinh chỉnh môi trường theo nhu cầu cụ thể của dự án.
+
+Phương pháp này không chỉ tăng cường hiệu suất làm việc mà còn đảm bảo tính nhất quán và chất lượng cao cho các dự án game và mô phỏng đô thị. Việc sử dụng quy trình thủ tục giúp dễ dàng tạo ra các biến thể khác nhau của thành phố, phù hợp với nhiều bối cảnh và yêu cầu khác nhau.
