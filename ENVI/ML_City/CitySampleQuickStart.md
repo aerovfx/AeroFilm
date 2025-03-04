@@ -1081,8 +1081,75 @@ Bạn đã hoàn thành quá trình tạo thành phố bằng Houdini Engine, nh
 🔥 **Bây giờ là lúc để sáng tạo và biến thành phố của bạn thành một kiệt tác!** 🚧🏗️
 
 
+Dưới đây là một giải pháp đầy đủ sử dụng VEX trong Houdini để căn chỉnh các đối tượng (ví dụ như đường phố, lô đất, tòa nhà) trên địa hình không bằng phẳng. Giải pháp này sử dụng Attribute Wrangle để chiếu các đối tượng xuống bề mặt của địa hình (được tạo bởi Heightfield hoặc một lưới mesh) và cập nhật tọa độ Y của chúng dựa trên giao điểm.
 
+---
 
+### **Các bước triển khai:**
+
+1. **Chuẩn bị địa hình:**
+   - Tạo hoặc nhập địa hình không bằng phẳng (ví dụ: sử dụng Heightfield để tạo địa hình tự nhiên).
+   - Đảm bảo địa hình được đặt vào input thứ 1 của node Attribute Wrangle (hoặc đổi thứ tự nếu cần).
+
+2. **Đối tượng cần căn chỉnh:**
+   - Đối tượng cần căn chỉnh (đường phố, lô đất, tòa nhà, ...) nên được đặt vào input thứ 0 của Attribute Wrangle.
+
+3. **Sử dụng Attribute Wrangle:**
+   - Thêm một node Attribute Wrangle vào network.
+   - Đặt input 0 là các đối tượng cần căn chỉnh, input 1 là địa hình.
+   - Trong Attribute Wrangle, sử dụng code sau:
+
+---
+
+### **Mã VEX:**
+
+```c
+// Định nghĩa biến để lưu kết quả giao điểm
+vector hitP; 
+int prim;
+vector uv;
+
+// Hướng chiếu (ray) theo trục Y âm
+vector rayDir = {0, -1, 0};
+
+// Chiếu tia từ vị trí của đối tượng xuống theo hướng Y âm.
+// Nếu tia va chạm với địa hình (input 1), lưu vị trí giao điểm trong hitP.
+if (intersect(1, @P, rayDir, hitP, prim, uv))
+{
+    // Bạn có thể thêm một giá trị offset để nâng đối tượng lên so với địa hình nếu cần.
+    float offset = 0.0;  // Thay đổi giá trị này theo nhu cầu (ví dụ: 0.2 cho lô đất, 1.0 cho đường phố)
+    
+    // Cập nhật tọa độ Y của đối tượng theo điểm giao nhau trên địa hình cộng với offset.
+    @P.y = hitP.y + offset;
+}
+```
+
+---
+
+### **Giải thích chi tiết:**
+
+- **`intersect(1, @P, rayDir, hitP, prim, uv)`**  
+  Hàm này chiếu một tia từ vị trí hiện tại của đối tượng (`@P`) theo hướng {0, -1, 0} (xuống dưới). Nếu tia gặp địa hình (input 1), hàm sẽ trả về:
+  - **hitP:** Vị trí giao nhau trên địa hình.
+  - **prim, uv:** Thông tin về primitive và tọa độ UV tại điểm va chạm (có thể dùng cho các mục đích khác nếu cần).
+
+- **`offset`**  
+  Thêm giá trị offset nếu bạn muốn đối tượng không chạm trực tiếp vào mặt đất mà có một khoảng cách nhất định (ví dụ: để tránh hiện tượng chồng lên nhau).
+
+- **`@P.y = hitP.y + offset;`**  
+  Cập nhật giá trị tọa độ Y của điểm đối tượng sao cho nó nằm chính xác trên bề mặt địa hình.
+
+---
+
+### **Tùy chỉnh thêm:**
+
+- **Xử lý góc nghiêng:**  
+  Nếu bạn cần căn chỉnh đối tượng không chỉ theo vị trí mà còn theo góc nghiêng của địa hình (ví dụ: xoay đối tượng để phù hợp với độ dốc), bạn có thể sử dụng hàm `primuvnormal()` để lấy vector pháp tuyến của địa hình và điều chỉnh rotation của đối tượng.
+
+- **Xử lý cho các đối tượng khác nhau:**  
+  Bạn có thể thêm điều kiện kiểm tra hoặc sử dụng các biến attribute riêng cho từng loại đối tượng để xử lý theo cách khác nhau (ví dụ: đường phố có offset khác với tòa nhà).
+
+---
 
 
 
