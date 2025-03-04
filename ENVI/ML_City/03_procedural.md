@@ -86,6 +86,7 @@ torch.onnx.export(model, dummy_input, "city_layout.onnx")
 ---
 
 ### 🚀 **Tiếp theo bạn muốn gì?**
+
 1. **Viết script hoàn chỉnh để huấn luyện GNNs từ dữ liệu OSM?**
 Dưới đây là **script hoàn chỉnh** để huấn luyện **GNNs** từ dữ liệu OpenStreetMap (OSM), dùng **PyTorch Geometric** để xử lý đồ thị.  
 
