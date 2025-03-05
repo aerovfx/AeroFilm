@@ -345,6 +345,7 @@ Chế độ **Full Preview** giúp hiển thị toàn bộ hệ thống đườn
   - **Tương tác viewport chậm hơn**, đặc biệt với thành phố lớn.  
 
 ---
+![image](https://github.com/user-attachments/assets/5f5cc6ff-f76c-4929-be89-6d044068074f)
 
 ### **Mẹo Tối Ưu Khi Dùng Full Preview**  
 ✅ **Chỉ bật khi cần kiểm tra tổng thể**, tắt khi chỉnh sửa để tránh giật lag.  
