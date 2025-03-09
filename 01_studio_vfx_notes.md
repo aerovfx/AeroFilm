@@ -1,4 +1,4 @@
-**best practices** (thực hành tốt) khi làm việc với **OTL** (Operator Type Library) hoặc HDA (Houdini Digital Asset) trong Houdini. Cụ thể:
+**Best practices** (thực hành tốt) khi làm việc với **OTL** (Operator Type Library) hoặc HDA (Houdini Digital Asset) trong Houdini. Cụ thể:
 
 1. **Ask before creating a new OTL**  
    - Khuyến nghị bạn nên **thảo luận** với nhóm hoặc kiểm tra thư viện OTL/HDA hiện có **trước khi** tạo một OTL/HDA mới.  
