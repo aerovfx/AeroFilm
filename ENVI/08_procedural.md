@@ -74,3 +74,59 @@ hou.setVector3d(my_layer.p, 50, 0, 5)
 ```
 
 **Lưu ý**: Trong ví dụ trên, bạn có thể thay thế `hou` bằng cách sử dụng một thư viện khác như `pyhoudini`.
+**Hướng Dẫn Chi Tiết: Tạo Compositing Ảnh Hưởng Sử dụng Blackmagic Design Fusion**
+
+### Tạo Đỉnh Trời (Sky Dome)
+
+Trước khi bắt đầu, bạn cần tạo một đỉnh trời (sky dome) để sử dụng trong compositing ảnh hưởng. Trong phần 
+này, chúng ta sẽ sử dụng các công cụ và texture có sẵn trong Fusion để tạo ra đỉnh trời.
+
+*   Tạo một hình vuông mới trong Fusion và đặt tên cho nó.
+*   Sử dụng công cụ "Create" > "Plane" để tạo một mặt phẳng mới.
+*   Đặt kích thước của mặt phẳng thành 2048x1024 pixel.
+*   Sử dụng công cụ "Paint" để thêm màu sắc và texture vào đỉnh trời.
+
+### Thêm mô hình 3D
+
+Trong phần này, chúng ta sẽ thêm mô hình 3D từ Houdini vào Fusion và động nó trong thời gian thực.
+
+*   Tải file mô hình 3D từ Houdini vào Fusion.
+*   Sử dụng công cụ "Import" để nhập mô hình 3D vào Fusion.
+*   Đặt vị trí và kích thước của mô hình 3D.
+
+### Compositing
+
+Compositing là quá trình kết hợp các lớp ảnh khác nhau lại với nhau để tạo ra một hình ảnh cuối cùng. Trong 
+phần này, chúng ta sẽ thêm các lớp ảnh khác nhau vào compositing và điều chỉnh màu sắc và độ sáng.
+
+*   Tạo một lớp mới trong Fusion và đặt tên cho nó.
+*   Sử dụng công cụ "Import" để nhập lớp ảnh vào Fusion.
+*   Đặt vị trí và kích thước của lớp ảnh.
+*   Sử dụng công cụ "Color" để điều chỉnh màu sắc và độ sáng của lớp ảnh.
+
+### Camera Matching
+
+Camera matching là quá trình đồng bộ hóa camera của các cảnh quay khác nhau. Trong phần này, chúng ta sẽ sử 
+dụng công cụ 3D của Fusion để đồng bộ hóa camera.
+
+*   Tạo một hình vuông mới trong Fusion và đặt tên cho nó.
+*   Sử dụng công cụ "Create" > "Camera" để tạo một camera mới.
+*   Đặt vị trí và kích thước của camera.
+*   Sử dụng công cụ "Transform" để điều chỉnh vị trí và kích thước của camera.
+
+### Render
+
+Cuối cùng, chúng ta sẽ render hình ảnh cuối cùng trong 32-bit floating-point format.
+
+*   Tạo một hình vuông mới trong Fusion và đặt tên cho nó.
+*   Sử dụng công cụ "Render" để render hình ảnh cuối cùng.
+*   Đặt kích thước và chất lượng của hình ảnh.
+*   Sử dụng công cụ "Save" để lưu hình ảnh cuối cùng.
+
+Một số điểm cần chú ý khi sử dụng Fusion:
+
+*   Hãy đảm bảo rằng bạn đã thiết lập không gian 3D đúng cách, bao gồm cả vị trí và kích thước của camera.
+*   Sử dụng các công cụ có sẵn trong Fusion để tạo ra các hiệu ứng phức tạp như đỉnh trời và khói.
+*   Compositing là một quá trình phức tạp và cần sự linh hoạt khi điều chỉnh màu sắc và độ sáng.
+*   Hãy đảm bảo rằng bạn đã render hình ảnh cuối cùng trong 32-bit floating-point format để đạt được chất 
+lượng hình ảnh tốt nhất.
