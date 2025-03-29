@@ -25,6 +25,9 @@
 
 ![hinata_000840_00_20250329084247](https://github.com/user-attachments/assets/5378efd0-5f0c-4150-93f9-327de7957d72)
 ![hinata_000850_00_20250329085102](https://github.com/user-attachments/assets/19048d13-37be-4b56-bb87-e92e1c940089)
+![hinata_000830_00_20250329083432](https://github.com/user-attachments/assets/603a4ded-857d-44d7-a0eb-7f5a86138d79)
+![hinata_000430_00_20250329030458](https://github.com/user-attachments/assets/e2400057-c736-430a-bb2b-498e76b1fb65)
+
 
 ### Training Progress Log
 
