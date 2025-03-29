@@ -1,25 +1,3 @@
-Tối ưu thời gian huấn luyện
-Giảm số lần lặp lại trên mỗi ảnh (Repeat trains per image)
-
-Giá trị 10 là hơi cao, có thể giảm xuống 5-7 nếu dataset đa dạng.
-
-Giảm số epochs nếu có overfitting
-
-Nếu thấy model hội tụ sớm, có thể thử giảm Max Train Epochs xuống 10-12.
-
-Tăng số bước giữa các lần tạo ảnh mẫu (Sample Image Every N Steps)
-
-Hiện tại, cứ mỗi 10 bước lại tạo ảnh mẫu, điều này có thể làm chậm huấn luyện.
-
-Tăng lên 50-100 bước để giảm tải.
-
-Sử dụng batch size lớn hơn
-
-Nếu phần cứng đủ mạnh, tăng batch size sẽ giúp giảm số bước huấn luyện cần thiết.
-
-Dùng mixed precision training
-
-Nếu hệ thống hỗ trợ FP16 (float16), có thể giúp tăng tốc đáng kể.
 
 ## Flux Gym Training Configuration
 
@@ -64,5 +42,28 @@ Nếu hệ thống hỗ trợ FP16 (float16), có thể giúp tăng tốc đáng
 ...
 [2025-03-29 15:29:26] [INFO] steps:  19%|█▉        | 1340/7040 [18:17:40<77:49:12, 49.15s/it, avr_loss=0.386]
 ```
+### Tổng kết qua lần train thử nghiệm với Fluxgym
+Tối ưu thời gian huấn luyện
+Giảm số lần lặp lại trên mỗi ảnh (Repeat trains per image)
+
+Giá trị 10 là hơi cao, có thể giảm xuống 5-7 nếu dataset đa dạng.
+
+Giảm số epochs nếu có overfitting
+
+Nếu thấy model hội tụ sớm, có thể thử giảm Max Train Epochs xuống 10-12.
+
+Tăng số bước giữa các lần tạo ảnh mẫu (Sample Image Every N Steps)
+
+Hiện tại, cứ mỗi 10 bước lại tạo ảnh mẫu, điều này có thể làm chậm huấn luyện.
+
+Tăng lên 50-100 bước để giảm tải.
+
+Sử dụng batch size lớn hơn
+
+Nếu phần cứng đủ mạnh, tăng batch size sẽ giúp giảm số bước huấn luyện cần thiết.
+
+Dùng mixed precision training
+
+Nếu hệ thống hỗ trợ FP16 (float16), có thể giúp tăng tốc đáng kể.
 
  🚀
