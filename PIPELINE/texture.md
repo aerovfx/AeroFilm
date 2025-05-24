@@ -1,5 +1,3 @@
----
-
 ## 🟤 **1. Cylinder – Workflow Cơ Bản với Smart Material**
 
 ### Các bước:
@@ -33,7 +31,6 @@
 * Tập trung vào vùng nổi bật thay vì từng pixel.
 * Dùng **HSL Adjustment Layer** để điều chỉnh toàn bộ màu sau cùng trước khi xuất file.
 
----
 
 ## 🟠 **2. Belt\_Model – Tinh chỉnh bằng AO và Generators**
 
@@ -65,7 +62,6 @@
 * Tạo nhóm riêng cho từng vật liệu để dễ quản lý.
 * Tăng độ chân thật bằng các Layer “damage” nhỏ (vết mòn, bụi...).
 
----
 
 ## 🟣 **3. Pilot\_Helmet – Chuẩn bị Render & Engine**
 
@@ -97,5 +93,5 @@
 * Có thể tăng hoặc giảm độ bóng toàn scene chỉ bằng 1 slider.
 * Tránh chỉnh lighting quá nhiều trong Painter – hãy làm điều đó trong Engine.
 
----
+
 
