@@ -22,18 +22,19 @@
 
 ### ⏱️ Giai đoạn 1: Gesture và khối cơ bản (Ngày 1–4)
 
-#### Ngày 1-2: Gesture Drawing (2 giờ/ngày)
-
-* Dùng [Quickposes.com](https://quickposes.com/): luyện gesture với thời gian 30s, 60s.
-* Chú ý đường hành động (line of action), tỷ lệ và trọng lượng.
-* Mỗi buổi ít nhất 100 pose (chia nhỏ 5 lần).
-
-#### Ngày 3-4: Dựng khối cơ bản bằng ZSphere
+#### Ngày 1-2: Dựng khối cơ bản bằng ZSphere
 
 * Mở ZBrush → Tạo mannequin dạng ZSphere từ đường line of action.
 * Biến ZSphere thành figure đơn giản (torso, pelvis, limbs).
 * Học cấu trúc cân bằng (pose weight & tilt).
 
+
+#### Ngày 3-4: Gesture Drawing (2 giờ/ngày)
+
+* Dùng [Quickposes.com](https://quickposes.com/): luyện gesture với thời gian 30s, 60s.
+* Chú ý đường hành động (line of action), tỷ lệ và trọng lượng.
+* Mỗi buổi ít nhất 100 pose (chia nhỏ 5 lần).
+* 
 > 🎯 Mục tiêu: hình dung được cấu trúc khối cơ thể từ đường nét gesture.
 
 ---
